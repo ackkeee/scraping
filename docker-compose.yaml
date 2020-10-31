@@ -1,0 +1,11 @@
+version: "2"
+services:
+  app:
+    container_name: scraping
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - 80:5000
+    restart: always
