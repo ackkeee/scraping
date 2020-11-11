@@ -4,6 +4,11 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from flask import Flask, render_template, request
 import requests
 from bs4 import BeautifulSoup
+import settings
+
+URL = settings.URL
+TAG = settings.TAG
+PRM = settings.PRM
 
 app = Flask(__name__)
 
@@ -14,7 +19,7 @@ def index():
 
   # Set theme 
   theme = request.args.get('theme', '')
-  url = '< SET_URL >' + theme
+  url = URL + theme
 
   resp = requests.get(url)
   content = resp.content
@@ -23,7 +28,8 @@ def index():
   soup = BeautifulSoup(content, "lxml")
 
   # Search and retrieve HTML elements
-  td_find = soup.find_all('< SET_HTML_TAGS >')
+  td_find = soup.find_all(TAG,PRM)
+#  td_find = soup.find_all('td','Instruments__instrumentNameTd--uXQqt')
 
   # Put the elements taken from the HTML into Company_list and array them.
   for company_list in td_find:

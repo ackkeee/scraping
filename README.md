@@ -38,7 +38,8 @@ Install Docker for Mac.
 
 ## 環境構築手順
 
-app.pyに必要なURLと、HTMLのTagを入れてください
+srcディレクトリ配下に.envを作成し必要なURLと、HTMLのTagを入れてください
+(.env_sampleファイルをリネームして活用ください）
 
 その後、以下のコマンドで一通りのサービスが立ち上がります
 ローカル開発でも同様です

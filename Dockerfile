@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.9-slim
 
 RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
@@ -14,6 +14,8 @@ RUN pip install --upgrade pip \
   && pip install flask \
   && pip install requests \
   && pip install lxml \
-  && pip install bs4
+  && pip install bs4 \
+  && pip install python-dotenv
+
 
 CMD ["python", "app.py"]
