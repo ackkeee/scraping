@@ -14,6 +14,8 @@ RUN pip install --upgrade pip \
   && pip install flask \
   && pip install requests \
   && pip install lxml \
-  && pip install bs4
+  && pip install bs4 \
+  && pip install python-dotenv
+
 
 CMD ["python", "app.py"]
