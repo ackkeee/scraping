@@ -10,10 +10,6 @@ URL = settings.URL
 TAG = settings.TAG
 PRM = settings.PRM
 
-print(settings.URL)
-print(TAG)
-print(PRM)
-
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
