@@ -29,7 +29,6 @@ def index():
 
   # Search and retrieve HTML elements
   td_find = soup.find_all(TAG,PRM)
-#  td_find = soup.find_all('td','Instruments__instrumentNameTd--uXQqt')
 
   # Put the elements taken from the HTML into Company_list and array them.
   for company_list in td_find:
