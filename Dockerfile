@@ -17,5 +17,4 @@ RUN pip install --upgrade pip \
   && pip install bs4 \
   && pip install python-dotenv
 
-
 CMD ["python", "app.py"]
